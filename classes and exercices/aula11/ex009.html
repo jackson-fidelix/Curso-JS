@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando Condição - Exercício transformando em site</title>
+    <style>
+        body {
+            color: #042202;
+            background-color: rgb(230, 233, 74);
+            font: normal 14pt Arial;
+            text-align: center;
+        }
+        input#btnverif {
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;            
+            background-color: rgb(20, 90, 182);
+            color: white;
+        }
+        input#pais {
+            border-radius: 5px;
+            width: 150px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Descobrindo a ferramenta IF</h1>
+    <h3>Verifique sua nacionalidade!</h3>
+    <p><strong> Digite o país em que nasceu: </strong><input type="text" name="pais" id="pais"></p>
+    <input type="button" id="btnverif" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var txt = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var txtpais = String(txt.value)
+            res.innerHTML = `<p> Se você mora em <strong> ${txtpais.toLocaleUpperCase()}, </strong> </p>`
+            if (txtpais == 'Brasil'){
+                res.innerHTML += ' Você é um Brasileiro(a)'
+            }else {
+                res.innerHTML += ' Você é um Entrangeiro(a) '
+            }
+        }
+    </script>
+    
+</body>
+</html>

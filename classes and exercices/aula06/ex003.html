@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro Programa JS</title>
+    <style>
+        body{
+            background-color: rgb(135, 0, 245);
+            color: white;
+            font: normal 15pt Arial;
+        }
+
+        /* isso é um comentário em CSS */
+
+        h1 {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- isso é um comentário em HTML -->
+    <h1>Olá, Mundo!</h1>
+    <p>Seguindo Aula 04...</p>
+
+
+    <script> 
+        
+        /*
+        var n1 = window.prompt('Digite um número: ') - string - prompt
+        var n2 = window.prompt('Digite outro número: ') - string - prompt
+        var soma = n1 + n2
+        window.alert('A soma dos valores é: ' + soma) // concatenação
+        */
+
+
+        var n1 = Number(window.prompt('Digite um número: ')) // conversão para numérico
+        var n2 = Number(window.prompt('Digite outro número: ')) // conversão para numérico
+        var soma = n1 + n2
+        
+        window.alert(`A soma dos valores ${n1} e ${n2} é igual a ${soma} !`) //apresentação do resultado
+        soma.length
+    </script>
+</body>
+</html>
